@@ -5,7 +5,7 @@ public class Dog {
   int yob;
   String state;
   boolean hypoallergenic;
-
+// comment
   Dog(String name, String breed, int yob, String state, boolean hypoallergenic) {
     this.name = name;
     this.breed = breed;

@@ -1,8 +1,8 @@
-interface House {
+interface IHouse {
   
 }
 
-class Hut implements House {
+class Hut implements IHouse {
   int capacity;
   int population;
 
@@ -12,7 +12,7 @@ class Hut implements House {
   }
 }
 
-class Inn implements House {
+class Inn implements IHouse {
   String name;
   int capacity;
   int stalls;
@@ -26,7 +26,7 @@ class Inn implements House {
   }
 }
 
-class Castle implements House {
+class Castle implements IHouse {
   String name;
   String familyName;
   int carriageHouse;
@@ -41,12 +41,12 @@ class Castle implements House {
 }
 
 class Horse {
-  House from;
-  House to;
+  IHouse from;
+  IHouse to;
   String name;
   String color;
   
-  Horse(House from, House to, String name, String color) {
+  Horse(IHouse from, IHouse to, String name, String color) {
     this.from = from;
     this.to = to;
     this.name = name;
@@ -55,11 +55,11 @@ class Horse {
 }
 
 class Carriage {
-  House from;
-  House to;
+  IHouse from;
+  IHouse to;
   int tonnage;
   
-  Carriage(House from, House to, int tonnage) {
+  Carriage(IHouse from, IHouse to, int tonnage) {
     this.from = from;
     this.to = to;
     this.tonnage = tonnage;
@@ -69,7 +69,7 @@ class Carriage {
 class ExamplesTravel {
   Hut hovel = new Hut(5, 1);
   Castle winterfell = new Castle("Winterfell", "Stark", 500, 6);
-  Inn crossroads = new Inn("Inn at the crossroads", 40, 20, 12);
+  Inn crossroads = new Inn("Inn At The Crossroads", 40, 20, 12);
   
   Inn cornerstone = new Inn("Cornerstones", 50, 25, 5);
   Hut hagrid = new Hut(2, 1);
